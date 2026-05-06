@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { StatCard } from "@/components/StatCard";
 import { AgentLogFeed } from "@/components/AgentLogFeed";
+import { RunAgents } from "@/components/RunAgents";
 import {
   Search,
   Stethoscope,
