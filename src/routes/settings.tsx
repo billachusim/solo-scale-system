@@ -62,7 +62,7 @@ function SettingsPage() {
     try {
       const entries = Object.entries(settings);
       for (const [key, value] of entries) {
-        await supabase.from("settings").upsert({ key, value: value as unknown as Record<string, unknown> }, { onConflict: "key" });
+        await supabase.from("settings").upsert({ key, value: JSON.parse(JSON.stringify(value)) }, { onConflict: "key" });
       }
       toast.success("Settings saved");
     } catch {
