@@ -103,6 +103,8 @@ function Dashboard() {
         <StatCard title="Pending" value={stats.pendingApprovals} icon={AlertTriangle} description="Need your input" />
       </div>
 
+      <RunAgents />
+
       <div>
         <h2 className="text-lg font-semibold text-foreground mb-3">Agent Activity</h2>
         <AgentLogFeed />
